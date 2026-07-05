@@ -21,3 +21,14 @@ print(full_name.upper())
 print(full_name.lower())
 print(full_name.title())
 print(f"Hello!, {full_name}.")
+# numbers
+# you can do multiple assignment
+x,y,z=1,2,3
+# represent constant in capital letters
+PI=3.14
+print(x+y)
+print(x*y)
+print(x*y*z)
+
+fav_number=19
+print(f'my favourite number is {fav_number}')
