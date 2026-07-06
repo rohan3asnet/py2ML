@@ -32,3 +32,12 @@ for value in range(1,5):
     cube= value **3 # double ** is called exponent
     cubes.append(cube)
 print(cubes)
+
+#list comprehension
+# it combines the for loop and the creation of new elements into one line
+# and automatically appends each new elemnt
+cubes=[value**3 for value in range(1,11)]
+# first open the squrae bracket 
+# and define the expression for the value you want to store
+# and write the for loop to generate numbers you want to feed into the expression
+print(cubes)
