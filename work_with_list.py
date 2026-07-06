@@ -41,3 +41,15 @@ cubes=[value**3 for value in range(1,11)]
 # and define the expression for the value you want to store
 # and write the for loop to generate numbers you want to feed into the expression
 print(cubes)
+
+#working with part of list
+# slicing a list
+fruits=['mango', 'apple', 'pineapple', 'orange', 'guava', 'grapes']
+print(fruits[0:3]) # this returns elements in 0,1,2 index
+print(fruits[1:4])# this returns elements in 1,2,3 index
+print(fruits[:3])# automatically starts from the beginning of list
+print(fruits[2:])# if you want slice that includes end of list
+#copying list
+fav_fruits=fruits[:]
+print(fav_fruits)
+
