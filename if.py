@@ -15,3 +15,12 @@ else:
     print(" you get no discount")
 # if-elif chain doesnot compulsarily require else at the end
 # you can use elif too
+
+# if statements with list
+ingridients=['milk', 'water', 'ginger', 'tea leaves', 'cinamon powder', 'sugar']
+for ingridient in ingridients:
+    if ingridient == 'cinamon powder':
+        print(f'{"cinamon powder"} is all used up.')
+    else:
+        print(f'Adding {ingridient}')
+print("\n Your Milk Tea is ready.")
