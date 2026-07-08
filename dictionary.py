@@ -51,3 +51,27 @@ for key in user_0:
 #looping through all values
 for value in user_0.values():
     print(f"\n Value: {value}") 
+
+#nesting 
+# a list of dictionaries
+# jaba multiple person ko information euta dictionary ley store garna sakdaena
+# taba list of dictionaries banaauna sakinxa 
+p1={'race':'Mongolian', 'complexity':'Light brown'}
+p2={'race':'African', 'complexity':'Black'}
+p3={'race':'American', 'complexity':'White'}
+p4={'race':'Indian', 'complexity':'Brown'}
+
+persons=[p1,p3,p3,p4]
+
+for person in persons:
+    print(person)
+
+#list in a dictionary
+person={
+    'race': 'Chinese',
+    'skills': ['Intelligent', 'High IQ','Problem solver' ]
+}
+print(f"the person you are talking about is {person['race']} "
+      "and he has following skills:\n")
+for skill in person['skills']:
+    print(f"{skill}\n")
