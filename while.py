@@ -29,12 +29,21 @@
 #     else:
 #         print(message)
 
-# exit while loop immediately without running any remaining code in the loop
-prompt = "\nPlease enter the name of a city you have visited:"
-prompt += "\n(Enter 'quit' when you are finished.) "
-while True:
-    city = input(prompt)
-    if city == 'quit':
-            break
-    else:
-            print(f"I'd love to go to {city.title()}!")
+# # break allow to exit while loop immediately without running any remaining code in the loop
+# prompt = "\nPlease enter the name of a city you have visited:"
+# prompt += "\n(Enter 'quit' when you are finished.) "
+# while True:
+#     city = input(prompt)
+#     if city == 'quit':
+#             break
+#     else:
+#             print(f"I'd love to go to {city.title()}!")
+
+# break ley k garxata, direct loop exit haanxa 
+# tara continue ley beginning of the loop maa pathaauxa
+current_number = 0
+while current_number < 10:
+    current_number += 1
+    if current_number % 2 == 0:
+        continue
+    print(current_number)
