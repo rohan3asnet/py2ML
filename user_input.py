@@ -31,3 +31,11 @@ if no_of_people <= 8:
     print('Your table is ready.')
 else:
     print('you will have to wait for a table.')
+
+#modulo operator'%'
+# it divides one number with another and returns remainder
+number = int(input("Enter a number: \n"))
+if number % 2 == 0:
+    print('Even')
+else:
+    print('Odd')
