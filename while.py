@@ -47,3 +47,10 @@ while current_number < 10:
     if current_number % 2 == 0:
         continue
     print(current_number)
+
+#if you ever write an infinite while loop
+# then you can exit from that state 
+# by simple exiting the terminal which is displaying your output 
+# or by pressing CTRL + C
+# make sure at least one part of the program makes 
+# loop's condition false or cause it to reach the break statement
