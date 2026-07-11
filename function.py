@@ -29,3 +29,20 @@ def players_nickname(player, title):
 # now the order of keyword arguments donot matter
 players_nickname(player='Cristiano Ronaldo', title='GOAT')
 players_nickname(title='FIFA Princess', player='Lionel Messi')
+
+#default value
+# when argument is provided in function call, it used provided value
+# if not then it uses default values
+def acc_dueto_gravity(g=9.8):
+    print(f'The value of acceleration due to gravity: {g}')
+
+acc_dueto_gravity()
+
+# example purpose only
+# def example( name, age=19):
+# for this function you can call it in variety of ways
+# example('john')
+# example('john', 18)
+# example(name='john')
+# example(name= 'john', age=20)
+# example(age=20, name= 'john')
