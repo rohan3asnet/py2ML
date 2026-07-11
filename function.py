@@ -19,3 +19,13 @@ def players_nickname(player, title):
 players_nickname('Cristiano Ronaldo', 'GOAT')
 players_nickname('Lionel Messi', 'FIFA Princess')
 print('SUUUUIIIIIIIII')
+# note: Order matters in positional arguments
+
+#keyword arguments
+# it is a name value pairs passed to a funciton
+# it make sure there is no confusion
+def players_nickname(player, title):
+    print(f"{player} is known as {title}")
+# now the order of keyword arguments donot matter
+players_nickname(player='Cristiano Ronaldo', title='GOAT')
+players_nickname(title='FIFA Princess', player='Lionel Messi')
