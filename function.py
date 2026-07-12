@@ -46,3 +46,11 @@ acc_dueto_gravity()
 # example(name='john')
 # example(name= 'john', age=20)
 # example(age=20, name= 'john')
+
+#return values
+def area_of_circle(radius, pi=3.14):
+    Area= pi* radius * radius
+    return Area
+
+radius=int(input("Enter the radius(cm) in integer to calculat Area: "))
+print(f"Area of circle of radius {radius} is {area_of_circle(radius)} sq.cm.")
