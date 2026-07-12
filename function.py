@@ -54,3 +54,16 @@ def area_of_circle(radius, pi=3.14):
 
 radius=int(input("Enter the radius(cm) in integer to calculat Area: "))
 print(f"Area of circle of radius {radius} is {area_of_circle(radius)} sq.cm.")
+
+#returning a dictionary
+def person_detail(fname, lname, age):
+    person={
+        'first name' : fname,
+        'last name' : lname,
+        'age' : age,
+    }
+
+    return person
+
+info= person_detail("Rameshwor", "Yadav", 36)
+print(info)
