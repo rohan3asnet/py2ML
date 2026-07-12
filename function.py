@@ -67,3 +67,24 @@ def person_detail(fname, lname, age):
 
 info= person_detail("Rameshwor", "Yadav", 36)
 print(info)
+
+#using while loop with a funciton
+def calculator(value1, value2):
+    while True:
+        print("choose which operation you want to perform\n")
+        print(" + , - , / , * , q for quit")
+        operator=input("input here: ")
+        if operator == '+' :
+            return value1 + value2
+        elif operator == '*':
+            return value1 * value2
+        elif operator ==  '-':
+            return value1 - value2
+        elif operator == '/':
+            return value1 / value2
+        elif operator == 'q':
+            break
+ans=calculator(value1 =8, value2=2)
+print(f"the answer is:{ans} ")
+    
+        
