@@ -95,3 +95,24 @@ def book_list(books):
 
 booknames=['seto dharti', 'karnali blues', 'alikhit']
 book_list(booknames)
+# when you pass list to a function
+# function can modify the list
+# changes made are permanent
+unread_books=['frankenstien', 'dracula', 'meditations','siddhartha']
+completed_books=[]
+
+def book_status(unread_books, completed_books):
+
+    while unread_books:
+        current_reads=unread_books.pop()
+        print(f"currently reading: {current_reads.title()}")
+        completed_books.append(current_reads)
+
+def show_status(completed_books):
+    print('\nAfter one month')
+    print('I have completed following books')
+    for completed_book in completed_books:
+        print(completed_book.title())
+
+book_status(unread_books, completed_books)
+show_status(completed_books)
