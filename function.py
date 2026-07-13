@@ -88,3 +88,10 @@ ans=calculator(value1 =8, value2=2)
 print(f"the answer is:{ans} ")
     
         
+#passing a list
+def book_list(books):
+    for book in books:
+        print(f"He wants to read {book.title()}")
+
+booknames=['seto dharti', 'karnali blues', 'alikhit']
+book_list(booknames)
