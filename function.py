@@ -178,7 +178,11 @@ pizza.make_pizza(12,'mushroom', 'pineapple', 'extra cheese')
 
 #using as to give a function an alias
 # if the name of function you are importing is long or conflict with existing one
-# then you can use short and unique alas
+# then you can use short and unique alias
+#for module_name import function_name as fn
 # for example
 # from pizza import make_pizza as mp
 # mp(16,'pepperoni')
+
+#using as to give module an alias
+# import module_name as mn
