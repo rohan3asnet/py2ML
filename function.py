@@ -186,3 +186,6 @@ pizza.make_pizza(12,'mushroom', 'pineapple', 'extra cheese')
 
 #using as to give module an alias
 # import module_name as mn
+
+#importing all functions in a module
+# from module_name import *
