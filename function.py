@@ -137,3 +137,16 @@ def fav_books(*books):
 
 fav_books('Crime and Punishment')
 fav_books('Kafka on the Shore', 'Norwegain Wood', 'The wind up bird chronicle')
+
+
+#mixing positional and arbitrary arguments
+# parameter that accepts arbitrary number of arguments must be placed at last
+# python matches positinal and keyword arguments first
+# and then collects remaining arguments in final parameter
+def bookishh(page, *books):
+    print(f"He read {page} pages of: ")
+    for book in books:
+         print(f"-{book}")
+
+bookishh(20,'Crime and Punishment')
+bookishh(30,'Kafka on the Shore', 'Norwegain Wood', 'The wind up bird chronicle')
