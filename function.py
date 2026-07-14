@@ -165,3 +165,10 @@ book_information=book_detail('Murakami', 'The Wind up Bird Chronicle',
                              publisher='Vintage')
 
 print(book_information)
+
+#importing an Entire Module
+
+import pizza
+
+pizza.make_pizza(16,'pepperoni')
+pizza.make_pizza(12,'mushroom', 'pineapple', 'extra cheese')
