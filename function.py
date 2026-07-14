@@ -150,3 +150,18 @@ def bookishh(page, *books):
 
 bookishh(20,'Crime and Punishment')
 bookishh(30,'Kafka on the Shore', 'Norwegain Wood', 'The wind up bird chronicle')
+
+#using arbitrary keyword arguments
+def book_detail(author, bookname, **book_info):
+    book_info['Author']=author
+    book_info['Book']=bookname
+    return book_info
+# **book_info causes python to create a dictionary
+# book_detail() first expects author and bookname 
+# and accepts as many key-value pairs
+book_information=book_detail('Murakami', 'The Wind up Bird Chronicle',
+                             price=970,
+                             genre='fiction',
+                             publisher='Vintage')
+
+print(book_information)
