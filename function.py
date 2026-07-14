@@ -172,3 +172,6 @@ import pizza
 
 pizza.make_pizza(16,'pepperoni')
 pizza.make_pizza(12,'mushroom', 'pineapple', 'extra cheese')
+
+# you can also import specific function from a module
+# from module_name import functionn_name/s
