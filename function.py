@@ -175,3 +175,10 @@ pizza.make_pizza(12,'mushroom', 'pineapple', 'extra cheese')
 
 # you can also import specific function from a module
 # from module_name import functionn_name/s
+
+#using as to give a function an alias
+# if the name of function you are importing is long or conflict with existing one
+# then you can use short and unique alas
+# for example
+# from pizza import make_pizza as mp
+# mp(16,'pepperoni')
