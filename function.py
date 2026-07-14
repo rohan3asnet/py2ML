@@ -115,4 +115,8 @@ def show_status(completed_books):
         print(completed_book.title())
 
 book_status(unread_books, completed_books)
+# book_status(unread_books[:], completed_books)
+# this is done to prevent a funciton from modifying a list
+# it sends a copy of existing list so that orginal remain unaffected
+# only do this if you actually need it otherwise pass the orginal list
 show_status(completed_books)
