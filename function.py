@@ -120,3 +120,20 @@ book_status(unread_books, completed_books)
 # it sends a copy of existing list so that orginal remain unaffected
 # only do this if you actually need it otherwise pass the orginal list
 show_status(completed_books)
+
+#passing an arbitrary number of arguments
+def fav_books(*books):
+    print(books)
+# *books tells python to make tuples called books
+# that tuple will contain all the values fav_books function recieves
+# this is used when we dont know how many arguments function needs to accept
+fav_books('Crime and Punishment')
+fav_books('Kafka on the Shore', 'Norwegain Wood', 'The wind up bird chronicle')
+
+def fav_books(*books):
+    print('His favourites books are: ')
+    for book in books:
+        print(f"-{book}")
+
+fav_books('Crime and Punishment')
+fav_books('Kafka on the Shore', 'Norwegain Wood', 'The wind up bird chronicle')
