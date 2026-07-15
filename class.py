@@ -36,3 +36,5 @@ my_book=Book('The Brothers Karamazov', 'Fyodor Dostoevsky')
 # __init__() methods creates an instance and sets name and author
 # python now returns the instance and we have assigned that instance to varaible my_book
 
+# accessing attributes
+print(f"{my_book.name}'s author is {my_book.author}.")
