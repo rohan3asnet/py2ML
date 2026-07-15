@@ -26,4 +26,13 @@ class Book:
 
     def publication(self):
         print(f"{self.name} is published by Penguin.")
-        
+
+#think class as a set of instruction for how to make an instance
+#making an instance from a class
+# here we are telling python to create a Book whose name is blahblah and author is blahblah
+my_book=Book('The Brothers Karamazov', 'Fyodor Dostoevsky')
+# when python read the above line
+# it calls the __init__() method
+# __init__() methods creates an instance and sets name and author
+# python now returns the instance and we have assigned that instance to varaible my_book
+
