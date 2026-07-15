@@ -38,3 +38,7 @@ my_book=Book('The Brothers Karamazov', 'Fyodor Dostoevsky')
 
 # accessing attributes
 print(f"{my_book.name}'s author is {my_book.author}.")
+
+#calling methods
+my_book.tag()
+my_book.publication()
