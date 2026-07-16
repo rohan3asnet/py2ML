@@ -34,6 +34,9 @@ class Book:
     def update_pages(self, page_number):
         self.page_no = page_number
 
+    def increment_pages(self, page_num):
+        self.page_no += page_num
+
 #think class as a set of instruction for how to make an instance
 #making an instance from a class
 # here we are telling python to create a Book whose name is blahblah and author is blahblah
@@ -58,3 +61,8 @@ my_book.pages()
 # 2. modifying attributes value through a method
 my_book.update_pages(256)
 my_book.pages()
+
+# 3. incrementing attributes value through a method
+my_book.increment_pages(30)
+my_book.pages()
+
