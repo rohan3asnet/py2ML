@@ -31,6 +31,9 @@ class Book:
     def pages(self):
         print(f"Reader has read upto {self.page_no} page number")
 
+    def update_pages(self, page_number):
+        self.page_no = page_number
+
 #think class as a set of instruction for how to make an instance
 #making an instance from a class
 # here we are telling python to create a Book whose name is blahblah and author is blahblah
@@ -49,5 +52,9 @@ my_book.publication()
 my_book.pages()
 # modifying attribute values
 # 1. modifying attributes value directly
-my_book.page_no=200
+# my_book.page_no=200
+# my_book.pages()
+
+# 2. modifying attributes value through a method
+my_book.update_pages(256)
 my_book.pages()
