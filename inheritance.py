@@ -22,6 +22,12 @@ class Laptop(Computer):
         #super fucntion is a special function that allows
         # you to call a method from the parent class
         super().__init__(company, model, year)
+        #defining attributes for child class
+        self.battery_capacity= 8
+
+    def portability(self):
+        print(f"Laptop is Portable and has battry capacity of {self.battery_capacity}hr.")
 
 pc=Laptop('Macbook', 'Air', 2020)
 print(pc.get_name())
+pc.portability()
