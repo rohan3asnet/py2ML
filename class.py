@@ -20,12 +20,16 @@ class Book:
         # all variables prefixed with self is available to every method in the class
         self.name = name 
         self.author = author
+        self.page_no=0 # default value set for an attribute
 
     def tag(self):
         print(f"{self.name} is a classic.")
 
     def publication(self):
         print(f"{self.name} is published by Penguin.")
+
+    def pages(self):
+        print(f"Reader has read upto {self.page_no} page number")
 
 #think class as a set of instruction for how to make an instance
 #making an instance from a class
@@ -42,3 +46,8 @@ print(f"{my_book.name}'s author is {my_book.author}.")
 #calling methods
 my_book.tag()
 my_book.publication()
+my_book.pages()
+# modifying attribute values
+# 1. modifying attributes value directly
+my_book.page_no=200
+my_book.pages()
