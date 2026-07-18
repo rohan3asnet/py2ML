@@ -17,3 +17,9 @@ print(pc.get_name())
 
 pc1=computer.Laptop('Lenovo', 'ThinkPad', 2016)
 print(pc1.get_name())
+
+# importing all classes from a module
+# from module_name import *
+
+# you can use aliases similar to function for classes too.
+# explore different modules built by others yourself.
