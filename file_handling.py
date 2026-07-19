@@ -14,3 +14,7 @@ for line in lines:
 print(pi_string)
 print(len(pi_string))
 
+#writing to a file
+#writing a single line
+path.write_text('PI is really intresting value.')
+
