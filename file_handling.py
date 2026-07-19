@@ -6,5 +6,11 @@ contents=path.read_text()
 
 #acessing a file's lines
 lines=contents.splitlines()
+#woring with file's contents
+pi_string=''
 for line in lines:
-    print(line)
+    pi_string += line
+
+print(pi_string)
+print(len(pi_string))
+
