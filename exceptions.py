@@ -35,13 +35,19 @@ except ValueError:
 
 from pathlib import Path
 
-path=Path('alice.txt')
-try:
-    contents=path.read_text(encoding='utf-8') # this encoding is needed when the file is not 
-    #created in the device, system's encoding doesnot match the encoding of the file that's being read
-except FileNotFoundError:
-    print(f" Sorry, the file {path} doesnot exist.")
+def count_words(path):
+    try:
+        contents=path.read_text(encoding='utf-8') # this encoding is needed when the file is not 
+        #created in the device, system's encoding doesnot match the encoding of the file that's being read
+    except FileNotFoundError:
+        print(f" Sorry, the file {path} doesnot exist.")
 
-else:
-    num_words = contents.count('Alice')
-    print(f"the file {path} has about {num_words} of Alice words being repeated.")    
+    else:
+        words = contents.split()
+        num_words = len(words)
+        print(f"the file {path} has about {num_words} of words.") 
+
+filenames=['alice.txt']# add more files as per your wish
+for filename in filenames:
+    path=Path(filename)
+    count_words(path)   
