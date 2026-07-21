@@ -31,4 +31,17 @@ try:
 except ValueError:
     print("Please enter only integer values.")
 
-    
+#handling filenotfounderror exception
+
+from pathlib import Path
+
+path=Path('alice.txt')
+try:
+    contents=path.read_text(encoding='utf-8') # this encoding is needed when the file is not 
+    #created in the device, system's encoding doesnot match the encoding of the file that's being read
+except FileNotFoundError:
+    print(f" Sorry, the file {path} doesnot exist.")
+
+else:
+    num_words = contents.count('Alice')
+    print(f"the file {path} has about {num_words} of Alice words being repeated.")    
