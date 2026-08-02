@@ -12,6 +12,8 @@ import matplotlib.pyplot as plt
 input_values=[1,2,3,4,5]
 cubes=[1,8,27,64,125]
 
+#to use styles add below line of code beofre calling subplots()
+plt.style.use('Solarize_Light2')
 fig, ax=plt.subplots()
 ax.plot(input_values, cubes, linewidth =3)
 
