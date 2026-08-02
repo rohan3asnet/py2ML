@@ -9,9 +9,12 @@
 #plotting asimple line graph 
 import matplotlib.pyplot as plt
 
+input_values=[1,2,3,4,5]
 cubes=[1,8,27,64,125]
+
 fig, ax=plt.subplots()
-ax.plot(cubes, linewidth =3)
+ax.plot(input_values, cubes, linewidth =3)
+
 #set chart title and label axes
 ax.set_title("Cube Numbers", font="Times New Roman",fontsize=24)
 ax.set_xlabel("Value", fontsize=14)
