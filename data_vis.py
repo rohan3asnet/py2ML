@@ -5,3 +5,12 @@
 
 # installing matplotlib
 # python3 -m pip install matplotlib
+
+#plotting asimple line graph 
+import matplotlib.pyplot as plt
+
+cubes=[1,8,27,64,125]
+fig, ax=plt.subplots()
+ax.plot(cubes)
+
+plt.show()
