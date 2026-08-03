@@ -39,3 +39,18 @@ ax.set_ylabel("square of Value", fontsize=14)
 #set size of tick labels
 ax.tick_params(labelsize=14)
 plt.show()
+
+#plotting a series of points with scatter()
+x_values=[1,2,3,4,5,6]
+y_values=[1,4,9,16,25,36]
+
+plt.style.use('Solarize_Light2')
+fig, ax=plt.subplots()
+ax.scatter(x_values,y_values, s=100)
+#set chart titles and labeles
+ax.set_title("Square Numbers", fontsize=24)
+ax.set_xlabel("Value",fontsize=14)
+ax.set_ylabel("square of Value", fontsize=14)
+#set size of tick labels
+ax.tick_params(labelsize=14)
+plt.show()
