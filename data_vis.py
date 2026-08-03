@@ -26,3 +26,11 @@ ax.set_ylabel("Cube of Value", fontsize=14)
 ax.tick_params(labelsize=14)
 
 plt.show()
+
+#scatter()
+
+plt.style.use('Solarize_Light2')
+fig, ax=plt.subplots()
+ax.scatter(3,9)
+
+plt.show()
