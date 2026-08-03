@@ -6,7 +6,7 @@
 # installing matplotlib
 # python3 -m pip install matplotlib
 
-#plotting asimple line graph 
+# plotting asimple line graph 
 import matplotlib.pyplot as plt
 
 input_values=[1,2,3,4,5]
@@ -31,6 +31,11 @@ plt.show()
 
 plt.style.use('Solarize_Light2')
 fig, ax=plt.subplots()
-ax.scatter(3,9)
-
+ax.scatter(3,9, s=200)# s is used to set the size of dots
+#set chart titles and labeles
+ax.set_title("Square Numbers", fontsize=24)
+ax.set_xlabel("Value",fontsize=14)
+ax.set_ylabel("square of Value", fontsize=14)
+#set size of tick labels
+ax.tick_params(labelsize=14)
 plt.show()
