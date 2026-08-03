@@ -60,12 +60,17 @@ y_values=[x**2 for x in x_values]
 
 plt.style.use('Solarize_Light2')
 fig, ax=plt.subplots()
-ax.scatter(x_values,y_values, s=10)
+ax.scatter(x_values,y_values,c=y_values, cmap=plt.cm.Blues, s=10)
 #set chart titles and labeles
 ax.set_title("Square Numbers", fontsize=24)
 ax.set_xlabel("Value",fontsize=14)
 ax.set_ylabel("square of Value", fontsize=14)
 #set the range of each axis
 ax.axis([0,100, 0,10000])
-
+#customizing tick labels
+#for large values, matplotlib default uses scientific notation
+# if you want plain notation
+ax.ticklabel_format(style='plain')
 plt.show()
+#if you want to save the plot then you can use below code instead of plot.show()
+# plt.savefig('name.png',bbox_inches='tight')
