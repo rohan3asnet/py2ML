@@ -11,11 +11,11 @@ class RandomWalk:
         while len(self.x_values) < self.num_points:
 
             x_direction=choice([1,-1])#move right(1) or left(-1)
-            x_distance=choice([0,1,2,3,4])
+            x_distance=choice([0,1,2,3,4,5,6,7,8,9])
             x_step=x_direction*x_distance
 
             y_direction=choice([1,-1])
-            y_distance=choice([0,1,2,3,4])
+            y_distance=choice([0,1,2,3,4,5,6,7,8,9])
             y_step=y_direction*y_distance
 
             if x_step==0 and y_step==0:
@@ -29,18 +29,18 @@ class RandomWalk:
 
 import matplotlib.pyplot as plt
 
-rw=RandomWalk(50_000)
+rw=RandomWalk(5000)
 rw.fill_walk()
 
 plt.style.use('classic')
 fig, ax=plt.subplots(figsize=(10,6), dpi=128)
 point_numbers=range(rw.num_points)
-ax.scatter(rw.x_values,rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=1)
+ax.plot(rw.x_values,rw.y_values, linewidth=3,color='blue')
 ax.set_aspect('equal')
 
 #for fist and last points
-ax.scatter(0,0, c='green', edgecolors='none', s=100)
-ax.scatter(rw.x_values[-1],rw.y_values[-1],c='red',edgecolors='none', s=100)
+ax.plot(0,0, color='green')
+ax.plot(rw.x_values[-1],rw.y_values[-1],color='red')
 #remove the axes
 ax.get_xaxis().set_visible(False)
 ax.get_yaxis().set_visible(False)
