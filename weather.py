@@ -1,5 +1,6 @@
 from pathlib import Path
 import csv
+import matplotlib.pyplot as plt
 
 path=Path('weather_data/ktm_daily_weather.csv')
 lines=path.read_text().splitlines()# yesley list of lines dinxa
@@ -25,3 +26,15 @@ for row in reader:#pailaa reader ley header padi sakeko vayera
 
 print(high_temps[:20])
 print(low_temps[:20])
+
+plt.style.use('Solarize_Light2')
+fig, ax=plt.subplots()
+ax.plot(high_temps[:50], color='red')
+ax.plot(low_temps[:50], color='cyan')
+
+ax.set_title('Kathmandu Daily temperature', fontsize=24)
+ax.set_xlabel('', fontsize=16)
+ax.set_ylabel("Temperature(F)", fontsize=16)
+ax.tick_params(labelsize=16)
+
+plt.show()
