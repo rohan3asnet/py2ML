@@ -21,21 +21,25 @@ dates=[]
 for row in reader:#pailaa reader ley header padi sakeko vayera 
     # aba chai arko line baata suru hunxa, first line xodera
     #second line baata loop suru hunxa
-    current_dates=datetime.strptime(row[0],'%Y-%m-%d')#datetime object maa conversion gareko
-    high=float(row[1])#string lai float maa convert gareko
-    low=float(row[2])
-    dates.append(current_dates)
-    high_temps.append(high)
-    low_temps.append(low)
+    try:
+        current_dates=datetime.strptime(row[0],'%Y-%m-%d')#datetime object maa conversion gareko
+        high=float(row[1])#string lai float maa convert gareko
+        low=float(row[2])
+    except ValueError:
+        print(f"Missing data for {current_dates}")
+    else:
+        dates.append(current_dates)
+        high_temps.append(high)
+        low_temps.append(low)
 
 # print(high_temps[:20])
 # print(low_temps[:20])
 
 plt.style.use('Solarize_Light2')
 fig, ax=plt.subplots()
-ax.plot(dates[:100], high_temps[:100], color='red')
-ax.plot(dates[:100], low_temps[:100], color='cyan')
-ax.fill_between(dates[:100], high_temps[:100], low_temps[:100], facecolor='gray', alpha=0.3)
+ax.plot(dates[:365], high_temps[:365], color='red')
+ax.plot(dates[:365], low_temps[:365], color='cyan')
+ax.fill_between(dates[:365], high_temps[:365], low_temps[:365], facecolor='gray', alpha=0.3)
 
 ax.set_title('Kathmandu Daily temperature', fontsize=24)
 ax.set_xlabel('Dates', fontsize=16)
