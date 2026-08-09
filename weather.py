@@ -28,16 +28,17 @@ for row in reader:#pailaa reader ley header padi sakeko vayera
     high_temps.append(high)
     low_temps.append(low)
 
-print(high_temps[:20])
-print(low_temps[:20])
+# print(high_temps[:20])
+# print(low_temps[:20])
 
 plt.style.use('Solarize_Light2')
 fig, ax=plt.subplots()
-ax.plot(dates[:50], high_temps[:50], color='red')
-ax.plot(dates[:50], low_temps[:50], color='cyan')
+ax.plot(dates[:100], high_temps[:100], color='red')
+ax.plot(dates[:100], low_temps[:100], color='cyan')
+ax.fill_between(dates[:100], high_temps[:100], low_temps[:100], facecolor='gray', alpha=0.3)
 
 ax.set_title('Kathmandu Daily temperature', fontsize=24)
-ax.set_xlabel('', fontsize=16)
+ax.set_xlabel('Dates', fontsize=16)
 fig.autofmt_xdate()#dates lai diagonally draw garna lai, so overlapping nahos
 ax.set_ylabel("Temperature(F)", fontsize=16)
 ax.tick_params(labelsize=16)
