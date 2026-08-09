@@ -1,6 +1,7 @@
 from pathlib import Path
 import csv
 import matplotlib.pyplot as plt
+from datetime import datetime 
 
 path=Path('weather_data/ktm_daily_weather.csv')
 lines=path.read_text().splitlines()# yesley list of lines dinxa
@@ -16,11 +17,14 @@ header_row=next(reader)# next() ley arko line return garxa,
 
 high_temps=[]
 low_temps=[]
+dates=[]
 for row in reader:#pailaa reader ley header padi sakeko vayera 
     # aba chai arko line baata suru hunxa, first line xodera
     #second line baata loop suru hunxa
+    current_dates=datetime.strptime(row[0],'%Y-%m-%d')#datetime object maa conversion gareko
     high=float(row[1])#string lai float maa convert gareko
     low=float(row[2])
+    dates.append(current_dates)
     high_temps.append(high)
     low_temps.append(low)
 
@@ -29,11 +33,12 @@ print(low_temps[:20])
 
 plt.style.use('Solarize_Light2')
 fig, ax=plt.subplots()
-ax.plot(high_temps[:50], color='red')
-ax.plot(low_temps[:50], color='cyan')
+ax.plot(dates[:50], high_temps[:50], color='red')
+ax.plot(dates[:50], low_temps[:50], color='cyan')
 
 ax.set_title('Kathmandu Daily temperature', fontsize=24)
 ax.set_xlabel('', fontsize=16)
+fig.autofmt_xdate()#dates lai diagonally draw garna lai, so overlapping nahos
 ax.set_ylabel("Temperature(F)", fontsize=16)
 ax.tick_params(labelsize=16)
 
