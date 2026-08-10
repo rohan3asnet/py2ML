@@ -23,13 +23,5 @@ for eq_dict in all_eq_dicts:
 
 title='Nepal Earthquake'
 fig=px.scatter_map(lat=latitudes, lon=longitudes, title=title, map_style="open-street-map")
-fig.update_geos(
-    resolution=50,
-    showcountries=True, countrycolor="black",   
-    showsubunits=True, subunitcolor="gray",      
-    lataxis_range=[26, 31],
-    lonaxis_range=[79, 89],
-    showland=True, landcolor="whitesmoke",
-)
 
 fig.show()
