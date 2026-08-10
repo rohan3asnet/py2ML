@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import plotly.express as px
 
 path=Path('earthquakes.geojson')
 contents=path.read_text()
@@ -16,6 +17,19 @@ for eq_dict in all_eq_dicts:
     longitudes.append(longitude)
     latitudes.append(latitude)
 
-print(magnitudes[:10])
-print(longitudes[:10])
-print(latitudes[:10])
+# print(magnitudes[:10])
+# print(longitudes[:10])
+# print(latitudes[:10])
+
+title='Nepal Earthquake'
+fig=px.scatter_map(lat=latitudes, lon=longitudes, title=title, map_style="open-street-map")
+fig.update_geos(
+    resolution=50,
+    showcountries=True, countrycolor="black",   
+    showsubunits=True, subunitcolor="gray",      
+    lataxis_range=[26, 31],
+    lonaxis_range=[79, 89],
+    showland=True, landcolor="whitesmoke",
+)
+
+fig.show()
