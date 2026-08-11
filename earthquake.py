@@ -22,6 +22,12 @@ for eq_dict in all_eq_dicts:
 # print(latitudes[:10])
 
 title='Nepal Earthquake'
-fig=px.scatter_map(lat=latitudes, lon=longitudes, title=title, map_style="open-street-map")
+fig=px.scatter_map(lat=latitudes, lon=longitudes, size=magnitudes, 
+                   title=title, 
+                   map_style="open-street-map",
+                   color=magnitudes,
+                   color_continuous_scale='agsunset',
+                   labels={'color':'Magnitude'},
+                   )
 
 fig.show()
