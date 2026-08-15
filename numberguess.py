@@ -2,19 +2,26 @@ import random
 
 comp_num=random.randrange(1,100)
 guess_count=0
+total_count=7
+print("You have only 7 attempts")
 while True:
-    user_num=int(input("Enter your guess: "))
+    print(f"You have {total_count} attempts left.")
     guess_count+=1
-    if comp_num > user_num:
-        print("Go Higher ")
-        continue
+    if total_count !=0:
+        
+        user_num=int(input("Enter your guess: "))
+        if comp_num > user_num:
+            print("Go Higher ")
 
-    elif comp_num < user_num:
-        print("Go Lower")
-        continue
+        elif comp_num < user_num:
+            print("Go Lower")
 
+        else:
+            print("#####Correct#####")
+            print(f"You got it in {guess_count} attemps.")
+            break
+        total_count-=1
     else:
-        print("Correct")
+        print("Better Luck next Time.")
         break
 
-print(f"You got it in {guess_count} attemps")
