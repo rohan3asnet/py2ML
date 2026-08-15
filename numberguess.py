@@ -8,19 +8,21 @@ while True:
     print(f"You have {total_count} attempts left.")
     guess_count+=1
     if total_count !=0:
-        
-        user_num=int(input("Enter your guess: "))
-        if comp_num > user_num:
-            print("Go Higher ")
+        try:
+            user_num=int(input("Enter your guess: "))
+            if comp_num > user_num:
+                print("Go Higher ")
 
-        elif comp_num < user_num:
-            print("Go Lower")
+            elif comp_num < user_num:
+                print("Go Lower")
 
-        else:
-            print("#####Correct#####")
-            print(f"You got it in {guess_count} attemps.")
-            break
-        total_count-=1
+            else:
+                print("#####Correct#####")
+                print(f"You got it in {guess_count} attemps.")
+                break
+            total_count-=1
+        except ValueError:
+            print("Enter only Valid input i.e. Positive Interger.")
     else:
         print("Better Luck next Time.")
         break
