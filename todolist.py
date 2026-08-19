@@ -1,26 +1,27 @@
 print("===== TO-DO LIST =====")
-print("1. Add task\n2. View tasks\n3. Remove task \n4. Quit")
-user_choice=input("\nChoose an option: ")
+while True:
+    print("1. Add task\n2. View tasks\n3. Remove task \n4. Quit")
+    user_choice=input("\nChoose an option: ")
 
-if user_choice == '1':
+    if user_choice == '1':
 
-    tasks=[]
+        tasks=[]
 
-    task=input("Enter a task: ")
-    tasks.append(task)
+        task=input("Enter a task: ")
+        tasks.append(task)
 
-    print("Task added!")
+        print("Task added!\n")
 
-elif user_choice == '2':
+    elif user_choice == '2':
 
-    print("Your tasks:")
-    for index, task in enumerate(tasks):
-        
-        print(f"{index}. {task}")
+        print("Your tasks:")
+        for index, task in enumerate(tasks):
+            
+            print(f"{index}. {task}\n")
 
-elif user_choice == '3':
-    print("remove task functions loading")
+    elif user_choice == '3':
+        print("remove task functions loading")
 
-else:
-    print("quit function loading")
+    else:
+        break
 
