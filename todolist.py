@@ -15,9 +15,12 @@ while True:
     elif user_choice == '2':
 
         print("Your tasks:")
-        for index, task in enumerate(tasks):
-            
-            print(f"{index}. {task}\n")
+        if len(tasks)==0:
+            print("Your Tasks list is empty.\n")
+        else:
+            for index, task in enumerate(tasks):
+                
+                print(f"{index}. {task}\n")
 
     elif user_choice == '3':
         print("remove task functions loading")
