@@ -1,11 +1,11 @@
-print("===== TO-DO LIST =====")
+tasks=[]
+
 while True:
+    print("===== TO-DO LIST =====")
     print("1. Add task\n2. View tasks\n3. Remove task \n4. Quit")
     user_choice=input("\nChoose an option: ")
-
+    
     if user_choice == '1':
-
-        tasks=[]
 
         task=input("Enter a task: ")
         tasks.append(task)
