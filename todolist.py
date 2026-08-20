@@ -37,6 +37,9 @@ while True:
         elif user_choice == 4:
             break
 
+        else:
+            print("Not in the Option. Choose from the Option.")
+            
     except ValueError:
         print("Invalid choice. Please try again")    
 
