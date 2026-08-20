@@ -18,12 +18,20 @@ while True:
         if len(tasks)==0:
             print("Your Tasks list is empty.\n")
         else:
-            for index, task in enumerate(tasks):
+            for index, task in enumerate(tasks, start=1):
                 
                 print(f"{index}. {task}\n")
 
     elif user_choice == '3':
-        print("remove task functions loading")
+        remove_taks=int(input('Which task do you want to remove? '))
+        del tasks[remove_taks-1]
+
+        for index, task in enumerate(tasks, start=1):
+                        
+                        print(f"{index}. {task}\n")
+        
+
+
 
     else:
         break
