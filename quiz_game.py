@@ -14,3 +14,7 @@ questions={
 
 }
 
+for question,answers in questions.items():
+    print(f"{question}")
+    for answer in answers:
+        print(f"{answer}")
