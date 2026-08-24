@@ -39,4 +39,6 @@ for question,options in questions.items():
         print("Wrong")
         count+=1
 
-print(f"Score:{score}/{count} ")
+print("=====Quiz Complete=====")
+percentage=(score/count) *100
+print(f"Score:{score}/{count} i.e. {percentage}%")
