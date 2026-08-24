@@ -19,6 +19,9 @@ answers={
     'What is the capital of India?':'A'
 
 }
+
+score=0
+count=0
 for question,options in questions.items():
     print(f"{question}")
     for option,info in options.items():
@@ -29,7 +32,11 @@ for question,options in questions.items():
     ques=question
     if user_choice == answers[ques]:
         print("Correct")
+        score+=1
+        count+=1
 
     else:
         print("Wrong")
+        count+=1
 
+print(f"Score:{score}/{count} ")
