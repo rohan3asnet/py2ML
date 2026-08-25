@@ -29,8 +29,14 @@ def display_question(question,options):
         print(f"{option}.{info}")
 
 def get_choice():
-    user_choice=input("Your answer ").upper()
-    return user_choice
+    while True:
+        user_choice=input("Your answer ").upper()
+        if user_choice not in ['A','B','C','D']:
+            print('Not in option. Input either A, B, C or D')
+            continue
+        else:
+            return user_choice
+        
 
 def check_choice(question,user_choice):
     return user_choice == answers[question]
