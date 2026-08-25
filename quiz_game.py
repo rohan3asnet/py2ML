@@ -21,7 +21,6 @@ answers={
 }
 
 score=0
-count=0
 
 def display_question(question,options):
     print(f"{question}")
@@ -48,14 +47,13 @@ for question,options in questions.items():
     if check_choice(question,user_choice):
         print("Correct")
         score+=1
-        count+=1
     else:
         print("Wrong")
-        count+=1
+        
 
 print("=====Quiz Complete=====")
-percentage=(score/count) *100
-print(f"Score:{score}/{count} i.e. {percentage}%")
+percentage=(score/len(questions)) *100
+print(f"Score:{score}/{len(questions)} i.e. {percentage}%")
     
 
 
