@@ -1,24 +1,31 @@
 questions={
     'What is the capital of Nepal?':{
-        'A': 'New Delhi',
-        'B': 'Kathmandu',
-        'C': 'Pokhara',
-        'D': 'Chitwan'
-        
-    },
-    'What is the capital of India?':{
+        "options":{
             'A': 'New Delhi',
             'B': 'Kathmandu',
             'C': 'Pokhara',
             'D': 'Chitwan'
+        },
+        'correct_answer':'B'
+    },
+        
+    
+    'What is the capital of India?':{
+        'options':{
+            'A': 'New Delhi',
+            'B': 'Kathmandu',
+            'C': 'Pokhara',
+            'D': 'Chitwan'
+        },
+        'correct_answer':'A'
             
         }
 }
-answers={
-    'What is the capital of Nepal?':'B',
-    'What is the capital of India?':'A'
+# answers={
+#     'What is the capital of Nepal?':'B',
+#     'What is the capital of India?':'A'
 
-}
+# }
 
 score=0
 
@@ -37,14 +44,14 @@ def get_choice():
             return user_choice
         
 
-def check_choice(question,user_choice):
-    return user_choice == answers[question]
+def check_choice(data,user_choice):
+    return user_choice == data['correct_answer']
 
 
-for question,options in questions.items():
-    display_question(question, options)
+for question,data in questions.items():
+    display_question(question, data["options"])
     user_choice=get_choice()
-    if check_choice(question,user_choice):
+    if check_choice(data,user_choice):
         print("Correct")
         score+=1
     else:
